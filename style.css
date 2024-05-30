@@ -118,7 +118,7 @@ nav a:hover::before {
   transform: rotate(45deg);
 }
 
-.page6 .btn3::before{
+.page6 .btn3::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -126,64 +126,64 @@ nav a:hover::before {
   height: 2px;
   width: 100%;
   background-color: black;
-  transition: all ease .25s;
+  transition: all ease 0.25s;
 }
 
-.page6 .btn3:hover::before{
+.page6 .btn3:hover::before {
   width: 10%;
 }
 
-.page6 .btn3 i{
-  transition: all ease .25s;
+.page6 .btn3 i {
+  transition: all ease 0.25s;
 }
 
-.page6 .btn3:hover i{
+.page6 .btn3:hover i {
   transform: rotate(45deg);
 }
 
-.page7 h1{
+.page7 h1 {
   position: relative;
 }
 
-.page7 h1::before{
-  content: '';
+.page7 h1::before {
+  content: "";
   position: absolute;
   bottom: -10px;
   right: 0;
   height: 5px;
   width: 100%;
   background-color: black;
-  transition: all ease .25s;
+  transition: all ease 0.25s;
 }
 
-.page7 .arrow{
-  transition: all ease .25s;
+.page7 .arrow {
+  transition: all ease 0.25s;
 }
 
-.page7 h1:hover::before{
+.page7 h1:hover::before {
   width: 3%;
 }
 
-.page7 h1:hover .arrow{
+.page7 h1:hover .arrow {
   transform: rotate(45deg);
 }
 
-.contactText{
+.contactText {
   transition: all ease 1s;
 }
 
-.contactText:hover::before{
+.contactText:hover::before {
   background-color: white;
 }
 
-.contactText:hover{
+.contactText:hover {
   color: white;
 }
 
-.scaledown{
-  transition: all ease .25s;
+.scaledown {
+  transition: all ease 0.25s;
 }
 
-.page7 h1:hover .page7 .scaledown{
-  transform: scale(.5);
+.page7 h1:hover .page7 .scaledown {
+  transform: scale(0.5);
 }

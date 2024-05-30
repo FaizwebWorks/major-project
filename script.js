@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   gsap.to(".parallax-image", {
-    yPercent: -20, 
+    yPercent: -20,
     ease: "none",
     scrollTrigger: {
       trigger: ".parallax-image",
@@ -180,19 +180,19 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  let video = document.querySelector(".contactVideo video")
-  let contactText = document.querySelector(".contactText")
+  let video = document.querySelector(".contactVideo video");
+  let contactText = document.querySelector(".contactText");
 
   contactText.addEventListener("mouseenter", () => {
-    video.style.opacity = 1
+    video.style.opacity = 1;
     video.currentTime = 0;
     video.play();
-  })
+  });
 
   contactText.addEventListener("mouseleave", () => {
-    video.style.opacity = 0
+    video.style.opacity = 0;
     video.pause();
-  })
+  });
 
   let revealText = document.querySelectorAll(".reveal-text");
   animateText(revealText, revealText, ".main");
