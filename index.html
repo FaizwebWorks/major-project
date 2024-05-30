@@ -8,7 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,17 +20,20 @@
       <div
         class="hero-section w-full h-screen bg-center bg-cover relative overflow-hidden"
       >
-        <div class="overlay absolute h-full w-full bg-[#00000009]"></div>
+      <div class="hero-img scaleUpHeroImg absolute z-[-1] top-0 left-0 h-full w-full">
+        <img src="./assets/img/hero-home.webp" alt="">
+      </div>
+        <div class="overlay z-20 absolute h-full w-full bg-[#00000009]"></div>
         <nav
-          class="flex w-full fixed z-[4] items-center justify-between h-14 px-14 py-6"
+          class="flex w-full z-[4] items-center justify-between h-14 px-14 py-6"
         >
-          <a class="uppercase font-normal text-base z-[5]" href="">fabrics</a>
-          <a class="uppercase font-normal text-base z-[5]" href=""
+          <a class="uppercase hoverElements font-normal text-base z-[1000]" href="">fabrics</a>
+          <a class="uppercase hoverElements font-normal text-base z-[1000]" href=""
             >sustainability</a
           >
-          <img class="w-10" src="./assets/img/logo.svg" alt="" />
-          <a class="uppercase font-normal text-base z-[5]" href="">About us</a>
-          <a class="uppercase font-normal text-base z-[5]" href=""
+          <img class="w-10 z-[1000]" src="./assets/img/logo.svg" alt="" />
+          <a class="uppercase hoverElements font-normal text-base z-[1000]" href="">About us</a>
+          <a class="uppercase hoverElements font-normal text-base z-[1000]" href=""
             >contact us</a
           >
         </nav>
@@ -35,12 +41,12 @@
           class="hero-text flex items-center justify-center flex-col text-center"
         >
           <h1
-            class="uppercase text-9xl font-medium text-[#fff428] mt-[5vw] text-[clamp(7rem,13.88vw,25rem)] mb-6"
+            class="uppercase z-[1000] text-9xl font-medium text-[#fff428] mt-[5vw] text-[clamp(7rem,13.88vw,25rem)] mb-6"
           >
             j stimler
           </h1>
           <button
-            class="capitalize bg-white py-1 px-4 text-lg fontmd rounded-full cursor-pointer hover:text-white hover:bg-black transition-all duration-[400ms] z-[3]"
+            class="capitalize z-[1000] hoverElements bg-white py-1 duration-[1s] px-4 text-lg fontmd rounded-full cursor-pointer hover:text-white hover:bg-black transition-all "
           >
             wholesale fabric suppliers
           </button>
@@ -50,7 +56,7 @@
         <div class="about-us h-[40%] py-[5vw] px-14 flex">
           <div class="text w-[15%]">
             <button
-              class="border aboutbtn relative bg-transparent border-black py-1 px-4 font-medium rounded-full capitalize fontmd"
+              class="border hoverElements hover:bg-black hover:text-white transition-all duration-[1s] aboutbtn relative bg-transparent border-black py-1 px-4 font-medium rounded-full capitalize fontmd"
             >
               about us
             </button>
@@ -64,8 +70,10 @@
         </div>
         <div class="h-[65%] mt-[5vw] px-14 flex items-center justify-between">
           <div class="img-con h-[80%] w-[56%] overflow-hidden">
-            <img data-scroll data-scroll-speed="-2"
-              class="h-full w-full object-cover "
+            <img
+              data-scroll
+              data-scroll-speed="-2"
+              class="h-full w-full object-cover"
               src="./assets/img/img-content-1.avif"
               alt=""
             />
@@ -74,13 +82,13 @@
             <div
               class="flex items-start justify-center flex-col gap-8 pl-[18%]"
             >
-              <p class="w-[74%] ">
+              <p class="w-[74%]">
                 A wholesale fabric supplier, with a talented in-house team of
                 experts, who create original trend-setting, commercial print
                 designs, based out of our studio in Stoke Newington, London.
               </p>
               <button
-                class="uppercase z-50 text-left relative font-medium btn flex items-center justify-center"
+                class="uppercase hoverElements animateUp z-50 text-left relative font-medium btn flex items-center justify-center"
               >
                 Read more
                 <i
@@ -95,17 +103,23 @@
         class="page3 relative h-screen w-full flex items-center justify-center flex-col gap-[40px]"
       >
         <div class="bg-img absolute h-full w-full overflow-hidden">
-          <img data-scroll data-scroll-speed="-3" class="h-full w-full object-cover" src="./assets/img/bg-banner.webp" alt="">
+          <img
+            data-scroll
+            data-scroll-speed="-3"
+            class="h-full w-full object-cover"
+            src="./assets/img/bg-banner.webp"
+            alt=""
+          />
         </div>
         <div class="overlay2"></div>
-        <button class="bg-white px-3 py-1 rounded-full z-[3]">
+        <button class="bg-white px-3 hoverElements hover:bg-black hover:text-white transition-all duration-[1s] py-1 rounded-full z-[3]">
           Our Fabrics
         </button>
         <p class="text-white reveal-text2 z-[3] text-6xl text-center w-[62%]">
           All of the fabrics we supply are manufactured using good standard
           materials, and following good standard manufacturing processes.
         </p>
-        <div class="text-white btn2 uppercase relative text-lg z-[3]">
+        <div class="text-white hoverElements btn2 uppercase relative text-lg z-[3]">
           All fabrics
           <i
             class="ri-arrow-right-up-line absolute right-[-27px] text-xl icon2 z-[3]"
@@ -122,7 +136,7 @@
             alt=""
           />
         </div>
-        <div class="w-[50%] zoom-in h-[100vh]">
+        <div class="w-[50%] scaleUp h-[100vh]">
           <div class="h-[35vh] w-[60%] ml-[25%] mt-[10%]">
             <img
               class="h-full w-full object-cover"
@@ -130,14 +144,18 @@
               alt=""
             />
           </div>
-          <div class="h-[13vw] zoom-in w-[13vw] absolute right-[3%] mt-[7vw]">
+          <div class="h-[13vw] scaleUp2 w-[13vw] absolute right-[3%] mt-[7vw]">
             <img
               class="h-full w-full object-cover"
               src="./assets/img/img-abstract-2.avif"
               alt=""
             />
           </div>
-          <div data-scroll data-scroll-speed="3" class="h-[13vw] w-[13vw] mt-[25vw] ml-[18%]">
+          <div
+            data-scroll
+            data-scroll-speed="4"
+            class="h-[13vw] w-[13vw] mt-[25vw] ml-[18%]"
+          >
             <img
               class="h-full w-full object-cover"
               src="./assets/img/img-abstract-3.avif"
@@ -146,8 +164,8 @@
           </div>
         </div>
       </div>
-      <div class="page5 h-screen w-full mt-[55vh]">
-        <img
+      <div class="page5 h-screen w-full mt-[55vh] overflow-hidden">
+        <img data-scroll data-scroll-speed="-3"
           class="h-full w-full object-cover"
           src="./assets/img/img-parallax.webp"
           alt=""
@@ -158,7 +176,7 @@
           class="flex flex-col gap-[2vw] items-center justify-center h-[38vh] w-full"
         >
           <button
-            class="border-[1px] text-lg font-medium border-black px-[10px] py-[2px] bg-transparent text-black h-fit rounded-full"
+            class="border-[1px] hoverElements animateSus hoverElements hover:bg-black hover:text-white transition-all duration-[1s] text-lg font-medium border-black px-[10px] py-[2px] bg-transparent text-black h-fit rounded-full"
           >
             Sustainability
           </button>
@@ -189,7 +207,7 @@
               more retailers are adopting using part/only sustainable fabric.
             </p>
             <button
-              class="mt-[2vw] relative uppercase font-medium flex items-center justify-center"
+              class="mt-[2vw] hoverElements hoverElements btn3 relative uppercase font-medium flex items-center justify-center"
             >
               Read more
               <i
@@ -202,7 +220,10 @@
       <div
         class="page7 w-full h-[55vh] relative flex items-center z-10 justify-center bg-[#FFF200]"
       >
-        <h1 class="uppercase relative text-7xl font-medium">
+      <div class="contactVideo absolute top-0 left-0 h-full w-full overflow-hidden">
+        <video autoplay muted loop class="h-full w-full object-cover transition-all duration-[.5] opacity-0" src="https://videos.pexels.com/video-files/5717614/5717614-hd_1280_720_25fps.mp4"></video>
+      </div>
+        <h1 class="uppercase contactText hoverElements relative text-7xl text-black font-medium">
           Contact Us
           <i class="ri-arrow-right-up-line absolute arrow text-[80px]"></i>
           <div

@@ -24,12 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 30;
-}
-
-nav {
-  backdrop-filter: blur(3px);
-  filter: brightness(102%);
+  z-index: 999999;
 }
 
 nav a {
@@ -54,10 +49,6 @@ nav a:hover {
 
 nav a:hover::before {
   width: 10%;
-}
-
-.hero-section {
-  background-image: url(./assets/img/hero-home.webp);
 }
 
 .hero-text {
@@ -92,13 +83,6 @@ nav a:hover::before {
   transform: rotate(45deg);
 }
 
-/* .page3 {
-  background: url(./assets/img/bg-banner.webp);
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-} */
 .overlay2 {
   position: absolute;
   height: 100%;
@@ -134,7 +118,7 @@ nav a:hover::before {
   transform: rotate(45deg);
 }
 
-.page6 button::before{
+.page6 .btn3::before{
   content: "";
   position: absolute;
   bottom: 0;
@@ -145,15 +129,15 @@ nav a:hover::before {
   transition: all ease .25s;
 }
 
-.page6 button:hover::before{
+.page6 .btn3:hover::before{
   width: 10%;
 }
 
-.page6 button i{
+.page6 .btn3 i{
   transition: all ease .25s;
 }
 
-.page6 button:hover i{
+.page6 .btn3:hover i{
   transform: rotate(45deg);
 }
 
@@ -184,9 +168,20 @@ nav a:hover::before {
   transform: rotate(45deg);
 }
 
+.contactText{
+  transition: all ease 1s;
+}
+
+.contactText:hover::before{
+  background-color: white;
+}
+
+.contactText:hover{
+  color: white;
+}
+
 .scaledown{
   transition: all ease .25s;
-  /* transform: scale(.5); */
 }
 
 .page7 h1:hover .page7 .scaledown{

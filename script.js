@@ -1,118 +1,3 @@
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector('.main'),
-//   smooth: true
-// });
-
-// const main = document.querySelector(".main");
-// const cursor = document.querySelector(".cursor");
-
-// main.addEventListener("mousemove", function (dets) {
-//   gsap.to(cursor, {
-//     x: dets.x,
-//     y: dets.y,
-//     ease: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",
-//   });
-// });
-
-// let links = document.querySelectorAll("nav a");
-
-// links.forEach((link) => {
-//   link.addEventListener("mouseenter", function () {
-//     console.log("Mouse entered");
-//     gsap.to(cursor, {
-//       scale: 1.5,
-//       opacity: 0,
-//       display: "none",
-//     });
-//   });
-// });
-
-// links.forEach((link) => {
-//   link.addEventListener("mouseleave", function () {
-//     gsap.to(cursor, {
-//       scale: 1,
-//       opacity: 1,
-//       display: "block",
-//     });
-//   });
-// });
-
-// // gsap.registerPlugin(ScrollTrigger);
-
-// // let revealText = document.querySelectorAll(".reveal-text")
-
-// // const text = new SplitType(revealText, { types: "chars" });
-// // console.log(text.chars);
-
-// // let chars = text.chars;
-
-// // gsap.from(chars, {
-// //   opacity: 0.2,
-// //   stagger: 0.1,
-// //   scrollTrigger: {
-// //     trigger: revealText,
-// //     scroll: ".main",
-// //     markers: true,
-// //     start: "top 80%",
-// //     end: "top top",
-// //     scrub: true,
-// //   },
-// // });
-
-// // gsap.registerPlugin(ScrollTrigger);
-
-// function animateText(elements, triggerElement, scrollElement) {
-//   const text = new SplitType(elements, { types: "chars" });
-//   const chars = text.chars;
-
-//   gsap.from(chars, {
-//     opacity: 0.2,
-//     duration: 1.5,
-//     stagger: 0.1,
-//     scrollTrigger: {
-//       trigger: triggerElement,
-//       scroll: scrollElement,
-//       markers: true,
-//       start: "top 80%",
-//       end: "top 5%",
-//       scrub: true,
-//     },
-//   });
-// }
-
-// // let revealText = document.querySelectorAll(".reveal-text");
-// // animateText(revealText, revealText, ".main");
-
-// // let revealText2 = document.querySelectorAll(".reveal-text2");
-// // animateText(revealText2, revealText2, ".main");
-
-// // let revealText3 = document.querySelectorAll(".reveal-text3");
-// // animateText(revealText3, revealText3, ".main");
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   let revealText = document.querySelectorAll(".reveal-text");
-//   animateText(revealText, revealText, ".main");
-
-//   let revealText2 = document.querySelectorAll(".reveal-text2");
-//   animateText(revealText2, revealText2, ".main");
-
-//   let revealText3 = document.querySelectorAll(".reveal-text3");
-//   animateText(revealText3, revealText3, ".main");
-// });
-
-// const lenis = new Lenis();
-
-// lenis.on("scroll", (e) => {
-//   console.log(e);
-//   ScrollTrigger.update();
-// });
-
-// gsap.ticker.add((time) => {
-//   lenis.raf(time * 1000);
-// });
-
-// gsap.ticker.lagSmoothing(0);
-
 document.addEventListener("DOMContentLoaded", () => {
   function loco() {
     gsap.registerPlugin(ScrollTrigger);
@@ -152,6 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const main = document.querySelector(".main");
   const cursor = document.querySelector(".cursor");
+  const hoverElements = document.querySelectorAll(".hoverElements");
+
+  hoverElements.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      cursor.style.display = "none";
+    });
+
+    elem.addEventListener("mouseleave", () => {
+      cursor.style.display = "block";
+    });
+  });
 
   main.addEventListener("mousemove", function (dets) {
     gsap.to(cursor, {
@@ -161,27 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  let links = document.querySelectorAll("nav a");
-
-  links.forEach((link) => {
-    link.addEventListener("mouseenter", function () {
-      console.log("Mouse entered");
-      gsap.to(cursor, {
-        scale: 1.5,
-        opacity: 0,
-        display: "none",
-      });
-    });
-  });
-
-  links.forEach((link) => {
-    link.addEventListener("mouseleave", function () {
-      gsap.to(cursor, {
-        scale: 1,
-        opacity: 1,
-        display: "block",
-      });
-    });
+  gsap.to(".scaleUpHeroImg", {
+    scale: 1.4,
+    scrollTrigger: {
+      trigger: ".scaleUpHeroImg",
+      scroller: ".main",
+      // markers: true,
+      start: "bottom bottom",
+      end: "bottom top",
+      scrub: true,
+    },
   });
 
   function animateText(elements, triggerElement, scrollElement) {
@@ -195,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: triggerElement,
         scroller: scrollElement,
-        markers: true, // Enable markers for debugging
+        // markers: true,
         start: "top 80%",
         end: "top 5%",
         scrub: true,
@@ -204,35 +89,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   gsap.from(".aboutbtn", {
-    left: "-20px",
+    left: "-10%",
     opacity: 0,
     scrollTrigger: {
       trigger: ".aboutbtn",
       scroller: ".main",
-      start: "top 80%",
-      end: "top 65%",
+      start: "top 90%",
+      end: "top 55%",
       scrub: true,
     },
   });
 
-  // gsap.utils.toArray(".parallax-image").forEach((image) => {
-  //   gsap.to(image, {
-  //     yPercent: -20, // Adjust as needed for the parallax effect
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: image,
-  //       scroller: ".main",
-  //       scrub: true,
-  //       start: "top bottom",
-  //       end: "bottom top",
-  //     },
-  //   });
-  // });
-
-
+  gsap.from(".animateUp", {
+    y: "100%",
+    opacity: 0,
+    duration: 0.25,
+    ease: Linear,
+    scrollTrigger: {
+      trigger: ".animateUp",
+      scroller: ".main",
+      start: "top 90%",
+      end: "top 80%",
+      // markers: true,
+      scrub: true,
+    },
+  });
 
   gsap.to(".parallax-image", {
-    yPercent: -20, // Adjust as needed for the parallax effect
+    yPercent: -20, 
     ease: "none",
     scrollTrigger: {
       trigger: ".parallax-image",
@@ -243,24 +127,70 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  gsap.from(".zoom-in",{
-    scale: .95,
-    opacity: 0,
+  gsap.from(".scaleUp", {
+    scale: 0.9,
+    // opacity: 0,
+    duration: 2,
     scrollTrigger: {
-      trigger: ".zoom-in",
+      trigger: ".scaleUp",
       scroller: ".main",
       scrub: true,
-      start: "top 80%",
-      end: "top 40%"
-    }
+      // markers: true,
+      start: "top 85%",
+      end: "top 50%",
+    },
+  });
+  gsap.from(".scaleUp2", {
+    scale: 0.9,
+    // opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".scaleUp2",
+      scroller: ".main",
+      scrub: true,
+      // markers: true,
+      start: "top 85%",
+      end: "top 50%",
+    },
+  });
+
+  gsap.from(".animateSus", {
+    x: "-10%",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".animateSus",
+      scroller: ".main",
+      // markers: true,
+      start: "top 100%",
+      end: "top 80%",
+      scrub: true,
+    },
+  });
+
+  gsap.from(".btn3", {
+    y: "100%",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".btn3",
+      scroller: ".main",
+      // markers: true,
+      start: "top 90%",
+      end: "top 60%",
+      scrub: true,
+    },
+  });
+
+  let video = document.querySelector(".contactVideo video")
+  let contactText = document.querySelector(".contactText")
+
+  contactText.addEventListener("mouseenter", () => {
+    video.style.opacity = 1
+    video.play();
   })
 
-
-
-
-
-
-
+  contactText.addEventListener("mouseleave", () => {
+    video.style.opacity = 0
+  })
 
   let revealText = document.querySelectorAll(".reveal-text");
   animateText(revealText, revealText, ".main");
