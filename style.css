@@ -161,7 +161,7 @@ nav a:hover::before {
 }
 
 .page7 h1:hover::before{
-  width: 5%;
+  width: 3%;
 }
 
 .page7 h1:hover .arrow{

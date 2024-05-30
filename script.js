@@ -185,11 +185,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   contactText.addEventListener("mouseenter", () => {
     video.style.opacity = 1
+    video.currentTime = 0;
     video.play();
   })
 
   contactText.addEventListener("mouseleave", () => {
     video.style.opacity = 0
+    video.pause();
   })
 
   let revealText = document.querySelectorAll(".reveal-text");
