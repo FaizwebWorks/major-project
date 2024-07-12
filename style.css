@@ -187,3 +187,49 @@ nav a:hover::before {
 .page7 h1:hover .page7 .scaledown {
   transform: scale(0.5);
 }
+
+.number{
+  position: relative;
+}
+
+.number::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: -2px;
+  right: 0;
+  background-color: #212121;
+  transition: all ease .25s;
+}
+
+.number:hover::before{
+  width: 8%;
+}
+
+.mail{
+  position: relative;
+}
+
+.mail::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: -2px;
+  right: 0;
+  background-color: #212121;
+  transition: all ease .25s;
+}
+
+.mail:hover::before{
+  width: 5%;
+}
+
+.number:hover .rotate{
+  transform: rotate(45deg);
+}
+
+.mail:hover i{
+  transform: rotate(45deg);
+}
